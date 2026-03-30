@@ -1,0 +1,50 @@
+---
+// Hero.astro — Reality Knights hero section
+---
+
+<section class="relative min-h-screen flex items-center justify-center hero-grid scanlines overflow-hidden">
+
+  <!-- Animated radial violet glow -->
+  <div class="hero-glow"></div>
+
+  <!-- Content layer (above scanlines z-index) -->
+  <div class="relative z-10 flex flex-col items-center text-center px-6 py-24 max-w-3xl mx-auto">
+
+    <!-- Eyebrow -->
+    <p class="font-inter text-rk-muted text-xs tracking-[0.25em] uppercase mb-6 font-medium">
+      Reality Knights LLC
+    </p>
+
+    <!-- Main heading -->
+    <h1 class="font-outfit font-700 text-glow leading-none tracking-tight text-white mb-6"
+        style="font-size: clamp(3rem, 8vw, 5.5rem); font-weight: 700;">
+      Reality<br />Knights
+    </h1>
+
+    <!-- Tagline -->
+    <p class="font-outfit font-semibold text-rk-text mb-4 max-w-xl leading-snug"
+       style="font-size: clamp(1.1rem, 2.5vw, 1.35rem);">
+      We build things we believe in — products, platforms, and bets on the future.
+    </p>
+
+    <!-- Sub-line -->
+    <p class="font-inter text-rk-muted text-sm leading-relaxed max-w-md">
+      A small holding company with big taste. Based wherever the Wi-Fi is fast.
+    </p>
+
+    <!-- Scroll nudge -->
+    <div class="mt-16 flex flex-col items-center gap-2 text-rk-muted">
+      <span class="text-xs tracking-widest uppercase font-inter">Explore</span>
+      <svg width="16" height-="24" viewBox="0 0 16 24" fill="none" xmlns="http://www.w3.org/2000/svg"
+           class="animate-bounce opacity-50">
+        <path d="M8 4v16M1 13l7 7 7-7" stroke="#6B7280" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+      </svg>
+    </div>
+
+  </div>
+
+  <!-- Bottom fade to body bg -->
+  <div class="absolute bottom-0 left-0 right-0 h-32 pointer-events-none"
+       style="background: linear-gradient(to bottom, transparent, #0A0A0F);"></div>
+
+</section>

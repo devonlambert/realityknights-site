@@ -1,0 +1,131 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* ── Base resets ─────────────────────────────────────────── */
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+  background-color: #0A0A0F;
+  color: #F1F0F5;
+}
+
+body {
+  font-family: 'Inter', sans-serif;
+  font-weight: 400;
+  background-color: #0A0A0F;
+  color: #F1F0F5;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  overflow-x: hidden;
+}
+
+/* ── Custom scrollbar ─────────────────────────────────────── */
+::-webkit-scrollbar {
+  width: 6px;
+}
+::-webkit-scrollbar-track {
+  background: #0A0A0F;
+}
+::-webkit-scrollbar-thumb {
+  background: #1E1E2E;
+  border-radius: 3px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #7C3AED;
+}
+
+/* ── Selection ────────────────────────────────────────────── */
+::selection {
+  background: rgba(124, 58, 237, 0.3);
+  color: #F1F0F5;
+}
+
+/* ── Hero grid background ─────────────────────────────────── */
+.hero-grid {
+  background-image:
+    linear-gradient(#1E1E2E 1px, transparent 1px),
+    linear-gradient(90deg, #1E1E2E 1px, transparent 1px);
+  background-size: 80px 80px;
+}
+
+/* ── Scanline overlay ─────────────────────────────────────── */
+.scanlines::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: repeating-linear-gradient(
+    0deg,
+    transparent,
+    transparent 2px,
+    rgba(0, 0, 0, 0.04) 2px,
+    rgba(0, 0, 0, 0.04) 4px
+  );
+  pointer-events: none;
+  z-index: 1;
+}
+
+/* ── Glow text ────────────────────────────────────────────── */
+.text-glow {
+  text-shadow:
+    0 0 20px rgba(167, 139, 250, 0.6),
+    0 0 40px rgba(124, 58, 237, 0.3),
+    0 0 80px rgba(124, 58, 237, 0.15);
+}
+
+/* ── Radial hero glow (animated) ─────────────────────────── */
+.hero-glow {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -60%);
+  width: 600px;
+  height: 600px;
+  background: radial-gradient(
+    ellipse at center,
+    rgba(124, 58, 237, 0.25) 0%,
+    rgba(124, 58, 237, 0.08) 40%,
+    transparent 70%
+  );
+  border-radius: 50%;
+  pointer-events: none;
+  z-index: 0;
+  animation: pulseGlow 4s ease-in-out infinite;
+}
+
+@keyframes pulseGlow {
+  0%, 100% { opacity: 0.6; transform: translate(-50%, -60%) scale(1); }
+  50%       { opacity: 1;   transform: translate(-50%, -60%) scale(1.08); }
+}
+
+/* ── Venture card hover ───────────────────────────────────── */
+.venture-card {
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+.venture-card:hover {
+  transform: translateY(-4px);
+}
+
+/* ── Status badge ─────────────────────────────────────────── */
+.badge {
+  font-family: 'Inter', sans-serif;
+  font-weight: 600;
+  font-size: 0.625rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  padding: 2px 8px;
+  border-radius: 9999px;
+  display: inline-block;
+}
+
+/* ── Investing section gradient wash ─────────────────────── */
+.investing-wash {
+  background:
+    radial-gradient(ellipse 80% 60% at 50% 0%, rgba(124, 58, 237, 0.12) 0%, transparent 70%),
+    #0A0A0F;
+}

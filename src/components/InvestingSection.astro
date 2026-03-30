@@ -1,0 +1,54 @@
+---
+// InvestingSection.astro
+---
+
+<section class="investing-wash py-28 px-6">
+  <div class="max-w-3xl mx-auto">
+
+    <!-- Section label -->
+    <p class="font-inter text-rk-muted text-xs tracking-[0.25em] uppercase mb-4 font-medium">
+      Capital Strategy
+    </p>
+
+    <!-- Heading -->
+    <h2
+      class="font-outfit text-rk-text mb-12 leading-tight"
+      style="font-size: clamp(1.8rem, 4vw, 2.75rem); font-weight: 700;"
+    >
+      What's Next:<br />
+      <span style="color: #A78BFA;">Capital &amp; Crypto</span>
+    </h2>
+
+    <!-- Body paragraphs -->
+    <div class="space-y-6 font-inter text-rk-muted leading-relaxed" style="font-size: 1.0625rem;">
+
+      <p>
+        Long before Reality Knights existed, there was <span class="text-rk-text font-medium">learncryptotips</span> —
+        a blog Devon ran to break down crypto for everyday people. That passion never left.
+      </p>
+
+      <p>
+        Bitcoin, Ethereum, Solana, and a handful of asymmetric bets form the backbone of Reality Knights'
+        capital strategy. We're building toward meaningful positions, one consistent move at a time.
+      </p>
+
+      <p>
+        No fund. No pitch deck. Just conviction and a long time horizon.
+      </p>
+
+    </div>
+
+    <!-- Decorative divider / asset row -->
+    <div class="mt-14 flex flex-wrap gap-4">
+      {['BTC', 'ETH', 'SOL', '+ more'].map((ticker) => (
+        <span
+          class="font-inter font-medium text-xs tracking-widest uppercase px-4 py-2 rounded-full"
+          style="background: rgba(124,58,237,0.12); color: #A78BFA; border: 1px solid rgba(124,58,237,0.25);"
+        >
+          {ticker}
+        </span>
+      ))}
+    </div>
+
+  </div>
+</section>

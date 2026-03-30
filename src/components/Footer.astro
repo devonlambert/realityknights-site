@@ -1,0 +1,33 @@
+---
+// Footer.astro
+---
+
+<footer class="border-t py-10 px-6" style="border-color: #1E1E2E; background: #0A0A0F;">
+  <div class="max-w-5xl mx-auto flex flex-col sm:flex-row items-center justify-between gap-4">
+
+    <!-- Brand mark -->
+    <div class="flex items-center gap-3">
+      <div
+        class="w-7 h-7 rounded-md flex items-center justify-center"
+        style="background: rgba(124,58,237,0.2); border: 1px solid rgba(124,58,237,0.35);"
+        aria-hidden="true"
+      >
+        <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M2 12L7 2l5 10H2z" fill="#A78BFA" />
+        </svg>
+      </div>
+      <span class="font-outfit font-semibold text-sm text-rk-text">Reality Knights LLC</span>
+    </div>
+
+    <!-- Copy -->
+    <p class="font-inter text-rk-muted text-sm text-center">
+      Built with ☕ and conviction
+    </p>
+
+    <!-- Year -->
+    <p class="font-inter text-rk-muted text-xs" style="color: #374151;">
+      &copy; {new Date().getFullYear()} Reality Knights LLC
+    </p>
+
+  </div>
+</footer>
