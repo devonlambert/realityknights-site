@@ -2,6 +2,7 @@
 // index.astro — Reality Knights landing page
 import Hero            from '../components/Hero.astro';
 import VentureCard     from '../components/VentureCard.astro';
+import About           from '../components/About.astro';
 import InvestingSection from '../components/InvestingSection.astro';
 import Footer          from '../components/Footer.astro';
 import '../styles/global.css';
@@ -10,7 +11,7 @@ const ventures = [
   {
     title:       'Geeky Inc',
     tagline:     'Anime × Gaming × 3D Printing',
-    description: 'Collectible blind bag figures, limited wave releases, and content for the otaku who also has 400 hours in Elden Ring. Wave 1 — Kitsune Legends — dropping soon.',
+    description: 'A community-driven platform for gamers, otaku, and makers — bringing your favorite characters and moments to life through 3D printing. Collectibles, accessories, tutorials, and a sanctuary for people who wear their obsessions with pride.',
     accentColor: '#06B6D4',
     link:        'https://geekyinc.com',
     linkText:    'Visit Geeky Inc',
@@ -98,6 +99,9 @@ const ventures = [
 
     </div>
   </section>
+
+  <!-- ── About ─────────────────────────────────────────── -->
+  <About />
 
   <!-- ── Investing / Capital ─────────────────────────────── -->
   <InvestingSection />
