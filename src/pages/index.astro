@@ -18,6 +18,15 @@ const ventures = [
     status:      'Active',
   },
   {
+    title:       'Goexoticar',
+    tagline:     'Exotic Car Culture for Dreamers',
+    description: 'For the dreamers, builders, and everyone who still has a supercar poster on their wall. Real talk about the most extraordinary machines ever made — from Koenigsegg hypercars to the golden age of racing.',
+    accentColor: '#D4AF37',
+    link:        'https://goexoticar.com',
+    linkText:    'Visit Goexoticar',
+    status:      'Active',
+  },
+  {
     title:       'Lootsignal',
     tagline:     'AI-Powered Real Estate Discovery',
     description: 'Lootsignal surfaces real estate properties with high profit potential — then uses AI to assess the numbers before you ever make an offer. Currently paused. The idea is too good to kill.',
@@ -57,7 +66,7 @@ const ventures = [
   <!-- Twitter Card -->
   <meta name="twitter:card"        content="summary" />
   <meta name="twitter:title"       content="Reality Knights — Building things worth believing in" />
-  <meta name="twitter:description" content="A small holding company with big taste. Building Geeky Inc, Lootsignal, and more." />
+  <meta name="twitter:description" content="A small holding company with big taste. Building Geeky Inc, Goexoticar, Lootsignal, and more." />
 </head>
 
 <body class="bg-rk-bg text-rk-text">
@@ -67,7 +76,7 @@ const ventures = [
 
   <!-- ── Ventures ───────────────────────────────────────── -->
   <section class="py-24 px-6" id="ventures">
-    <div class="max-w-5xl mx-auto">
+    <div class="max-w-6xl mx-auto">
 
       <!-- Section header -->
       <div class="mb-14">
@@ -82,8 +91,8 @@ const ventures = [
         </h2>
       </div>
 
-      <!-- Card grid: 2-col desktop, 1-col mobile -->
-      <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+      <!-- Card grid: 3-col desktop, 2-col tablet, 1-col mobile -->
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
         {ventures.map((v) => (
           <VentureCard
             title={v.title}
