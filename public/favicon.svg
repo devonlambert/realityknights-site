@@ -1,0 +1,5 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" width="32" height="32">
+  <rect width="32" height="32" rx="6" fill="#0A0A0F"/>
+  <!-- Chess knight silhouette, facing right, simplified 7-point shape -->
+  <path fill="#7C3AED" d="M12,27 C10,22 7,18 8,17 C8,14 10,10 12,8 C14,6 18,5 20,7 L24,13 L18,18 L15,23 Z"/>
+</svg>

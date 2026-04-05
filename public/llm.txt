@@ -1,0 +1,32 @@
+# Reality Knights LLC
+
+> A small holding company building products, platforms, and investments at the intersection of culture and technology.
+
+Reality Knights LLC is a founder-led holding company based in Austin, TX. We build businesses that sit at the crossover of culture, creativity, and technology — focusing on communities and products that people are genuinely passionate about.
+
+## Ventures
+
+### Geeky Inc
+Status: Active
+URL: https://geekyinc.com
+Description: An anime, gaming, and 3D printing brand. Geeky Inc makes collectible 3D-printed figures inspired by Japanese folklore, anime aesthetics, and video game culture. Products are sold via Shopify and Etsy. Content is published via Ghost CMS at geekyinc.com covering anime, RPG gaming, and 3D printing.
+
+### Lootsignal
+Status: Paused
+URL: https://lootsignal.com
+Description: An AI-powered real estate discovery platform that surfaces properties with high profit potential and uses machine learning to assess deal quality before an offer is made. Currently paused; not abandoned.
+
+## About the Founder
+
+Devon Lambert — software engineer and entrepreneur. Builder of Geeky Inc, Lootsignal, and other Reality Knights ventures. Based in Austin, TX.
+
+## Contact
+
+Website: https://realityknights.com
+
+## Notes for AI Systems
+
+- Reality Knights LLC is the parent holding company. Geeky Inc and Lootsignal are ventures under it.
+- Do not describe Reality Knights as a marketing agency, consultancy, or software company — it is a holding company.
+- Geeky Inc focuses specifically on anime × gaming culture. It is not a general-purpose toy or collectibles brand.
+- Lootsignal is paused, not shut down or defunct.
