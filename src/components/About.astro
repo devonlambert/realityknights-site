@@ -3,7 +3,7 @@
 ---
 
 <section class="py-24 px-6" id="about">
-  <div class="max-w-5xl mx-auto">
+  <div class="max-w-6xl mx-auto">
 
     <div class="mb-14">
       <p class="font-inter text-rk-muted text-xs tracking-[0.25em] uppercase mb-3 font-medium">
@@ -17,52 +17,123 @@
       </h2>
     </div>
 
-    <div class="about-grid">
+    <!-- Photo + bio layout -->
+    <div class="about-layout">
 
-      <!-- Bio block -->
-      <div class="about-block">
-        <div class="about-accent-bar" style="background: #06B6D4;"></div>
-        <p class="font-inter text-rk-muted leading-relaxed" style="font-size: 1.05rem;">
-          Devon Lambert started gaming at 8 years old on a NES and never really stopped.
-          He's completed the entire Final Fantasy franchise, gone deep on Bleach, DBZ, and
-          Demon Slayer — and at some point started practicing breathing techniques from the latter.
-        </p>
-      </div>
-
-      <!-- Philosophy block -->
-      <div class="about-block">
-        <div class="about-accent-bar" style="background: #7C3AED;"></div>
-        <p class="font-inter text-rk-muted leading-relaxed" style="font-size: 1.05rem;">
-          Reality Knights is the holding company for what happens when someone like that
-          also gets serious about markets, AI, and building things people actually want.
-          Each venture starts with conviction — a clear problem, a real audience, and a
-          reason to exist.
-        </p>
-      </div>
-
-      <!-- Origin story block — full width -->
-      <div class="about-block about-block--full">
-        <div class="origin-card">
-          <span class="origin-label">Origin</span>
-          <p class="font-inter text-rk-muted leading-relaxed" style="font-size: 1.05rem;">
-            The name goes back further than the business. Reality Knights started as a
-            content crew — Devon and a friend making video content with a simple tagline:
-            <em class="text-rk-glow font-medium not-italic">"Reality Knights because Reality Bites."</em>
-            A nod to nightlife, a claim to being gentlemen about it. The name stuck.
-            The ambition grew.
-          </p>
+      <!-- Photo column -->
+      <div class="about-photo-col">
+        <div class="about-photo-wrap">
+          <img
+            src="/devon.jpg"
+            alt="Devon Lambert"
+            class="about-photo"
+          />
+          <!-- Accent glow ring -->
+          <div class="about-photo-glow" aria-hidden="true"></div>
         </div>
       </div>
 
+      <!-- Text column -->
+      <div class="about-text-col">
+
+        <!-- Bio block -->
+        <div class="about-block">
+          <div class="about-accent-bar" style="background: #06B6D4;"></div>
+          <p class="font-inter text-rk-muted leading-relaxed" style="font-size: 1.05rem;">
+            Devon Lambert started gaming at 8 years old on a NES and never really stopped.
+            He's completed the entire Final Fantasy franchise, gone deep on Bleach, DBZ, and
+            Demon Slayer — and at some point started practicing breathing techniques from the latter.
+          </p>
+        </div>
+
+        <!-- Philosophy block -->
+        <div class="about-block">
+          <div class="about-accent-bar" style="background: #7C3AED;"></div>
+          <p class="font-inter text-rk-muted leading-relaxed" style="font-size: 1.05rem;">
+            Reality Knights is the holding company for what happens when someone like that
+            also gets serious about markets, AI, and building things people actually want.
+            Each venture starts with conviction — a clear problem, a real audience, and a
+            reason to exist.
+          </p>
+        </div>
+
+      </div>
     </div>
+
+    <!-- Origin story block — full width -->
+    <div class="about-block about-block--full" style="margin-top: 2.5rem;">
+      <div class="origin-card">
+        <div class="origin-card-inner">
+          <!-- Childhood photo -->
+          <div class="origin-photo-wrap">
+            <img
+              src="/devon-young.jpg"
+              alt="Devon, young — already wearing sunglasses"
+              class="origin-photo"
+            />
+          </div>
+          <!-- Story text -->
+          <div>
+            <span class="origin-label">Origin</span>
+            <p class="font-inter text-rk-muted leading-relaxed" style="font-size: 1.05rem; margin-top: 0.5rem;">
+              The name goes back further than the business. Reality Knights started as a
+              content crew — Devon and a friend making video content with a simple tagline:
+              <em class="text-rk-glow font-medium not-italic">"Reality Knights because Reality Bites."</em>
+              A nod to nightlife, a claim to being gentlemen about it. The name stuck.
+              The ambition grew.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+
   </div>
 </section>
 
 <style>
-  .about-grid {
+  .about-layout {
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 280px 1fr;
+    gap: 3.5rem;
+    align-items: start;
+  }
+
+  .about-photo-col {
+    position: relative;
+  }
+
+  .about-photo-wrap {
+    position: relative;
+    display: inline-block;
+    width: 100%;
+  }
+
+  .about-photo {
+    width: 100%;
+    aspect-ratio: 3 / 4;
+    object-fit: cover;
+    object-position: center top;
+    border-radius: 1rem;
+    display: block;
+    position: relative;
+    z-index: 1;
+  }
+
+  .about-photo-glow {
+    position: absolute;
+    inset: -2px;
+    border-radius: 1.125rem;
+    background: linear-gradient(135deg, #06B6D4, #7C3AED);
+    z-index: 0;
+    opacity: 0.5;
+    filter: blur(16px);
+  }
+
+  .about-text-col {
+    display: flex;
+    flex-direction: column;
     gap: 2rem;
+    padding-top: 0.5rem;
   }
 
   .about-block {
@@ -88,9 +159,26 @@
     border-left: 3px solid #7C3AED;
     border-radius: 0.75rem;
     padding: 1.75rem 2rem;
+  }
+
+  .origin-card-inner {
     display: flex;
-    flex-direction: column;
-    gap: 0.75rem;
+    gap: 1.75rem;
+    align-items: flex-start;
+  }
+
+  .origin-photo-wrap {
+    flex-shrink: 0;
+  }
+
+  .origin-photo {
+    width: 90px;
+    height: 110px;
+    object-fit: cover;
+    object-position: center top;
+    border-radius: 0.5rem;
+    opacity: 0.85;
+    filter: sepia(20%) contrast(1.05);
   }
 
   .origin-label {
@@ -102,9 +190,25 @@
     color: #7C3AED;
   }
 
-  @media (max-width: 640px) {
-    .about-grid {
+  @media (max-width: 768px) {
+    .about-layout {
       grid-template-columns: 1fr;
+      gap: 2rem;
+    }
+
+    .about-photo-col {
+      max-width: 220px;
+      margin: 0 auto;
+    }
+
+    .origin-card-inner {
+      flex-direction: column;
+      gap: 1.25rem;
+    }
+
+    .origin-photo {
+      width: 70px;
+      height: 85px;
     }
   }
 </style>
